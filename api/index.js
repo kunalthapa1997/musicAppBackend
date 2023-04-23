@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var app = require('./app');
 var port = process.env.PORT || 3789;
 
-mongoose.connect('mongodb://127.0.0.1:27017/kunaldb',{useNewUrlParser: true},(error, response) => {
+mongoose.connect(process.env.DataBase,{useNewUrlParser: true},(error, response) => {
     if(error){
         throw error;
     }else{
